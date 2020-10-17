@@ -30,28 +30,28 @@ map.on('click', (event) => {
 
 // photos upload
 function addPhotoField() {
-  //pegar o container de fotos #images
+  //get picture container #images
   const container = document.querySelector('#images');
 
-  //pegar o container para duplicar .new-image
+  //duplicate .new-image container
   const fieldsContainer = document.querySelectorAll('.new-upload');
 
-  //realizar o clone da última imagem adicionada
+  //clone the last image added
   const newFieldContainer = fieldsContainer[
     fieldsContainer.length - 1
   ].cloneNode(true);
 
-  //verificar se o campo está vazio, se sim, não adicionar ao container de imagens
+  //check if the field is empty, if yes, do not add it to the image container
   const input = newFieldContainer.children[0];
 
   if (input.value == '') {
     return;
   }
 
-  //limpar container antes de adicionar ao container de imagens
+  //clean container before adding to the image container
   input.value = '';
 
-  //adicionar o clone ao container de #images
+  //add the clone to the #images container
   container.appendChild(newFieldContainer);
 }
 
@@ -61,34 +61,40 @@ function deletField(event) {
   const fieldsContainer = document.querySelectorAll('.new-upload');
 
   if (fieldsContainer.length < 2) {
-    //limpar o valor do campo
+    //clear the field value
     span.parentNode.children[0].value = '';
 
     return;
   }
 
-  // deletar campo
+  // delete field
   span.parentNode.remove();
 }
 
-// selecionar sim ou não
-
 function toggleSelect(event) {
-  //retirar a classse .active dos botões
+  //remove the .active class from the buttons
   document
     .querySelectorAll('.button-select button')
     .forEach((button) => button.classList.remove('active'));
 
-  // colocar a classe .active
+  // put the .active class
   const button = event.currentTarget;
   button.classList.add('active');
 
-  // atualizar meu input hidden com o valor selecionado
+  // update my hidden input with the selected value
   const input = document.querySelector('[name="opening_on_weekends"]');
 
   input.value = button.dataset.value;
+}
 
-  // pegar o botão clicar
+// form position validade / Challenge
 
-  //verificar se é sim ou não
+function validate(event) {
+  lat = document.querySelector('[name=lat]').value;
+  lng = document.querySelector('[name=lng]').value;
+
+  if (lat == '' && lng == '') {
+    event.preventDefault();
+    alert('Por favor, não esqueça a localização no mapa');
+  }
 }
