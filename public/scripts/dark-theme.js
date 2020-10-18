@@ -1,24 +1,3 @@
-/*const getHtml = document.querySelector('html');
-
-const checkbox = document.querySelector('#switch');
-let currentClass = '';
-
-checkbox.addEventListener('change', () => {
-  getHtml.classList.toggle('dark-mode');
-
-  currentClass = getHtml.className;
-});*/
-
-/*const nightMode = document.querySelector('#night-mode');
-
-// ao clicar mudaremos as cores
-nightMode.addEventListener('click', () => {
-  // adiciona a classe `night-mode` ao html
-  document.documentElement.classList.toggle('night-mode');
-});*/
-
-// save current theme in localStorage
-
 // pegamos o valor no localStorage
 const nightModeStorage = localStorage.getItem('gmtNightMode');
 const nightMode = document.querySelector('#night-mode');
@@ -46,3 +25,6 @@ nightMode.addEventListener('click', () => {
   // senão remove
   localStorage.removeItem('gmtNightMode');
 });
+
+// code reference
+// https://willianjusten.com.br/adicionando-night-mode-no-seu-site/
