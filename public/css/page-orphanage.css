@@ -12,7 +12,6 @@ main {
   width: 70rem;
   margin: 6.4rem auto;
   background: white;
-  border: 1px solid #d3e2e5;
 
   border-radius: 2rem;
 
@@ -29,7 +28,7 @@ main {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1.6rem;
-  margin: 16px 40px 0;
+  margin: 16px 40px;
 }
 
 .images button {
@@ -59,6 +58,8 @@ main {
 
 .orphanage-details-content {
   padding: 8rem;
+  background: var(--bg-orphanage);
+  transition: 500ms;
 }
 
 .orphanage-details-content h1 {
@@ -121,6 +122,7 @@ main {
 
 .open-details .open-on-weekends {
   color: #37c77f;
+  border-radius: 20px;
 }
 
 .open-details.open {

@@ -7,7 +7,7 @@
 
 aside {
   width: clamp(24rem, 25vw, 44rem);
-  background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
+  background: var(--background);
   padding: clamp(3rem, 5vw, 8rem);
 
   display: flex;
@@ -47,7 +47,7 @@ a.create-orphanage {
 
   width: 6.4rem;
   height: 6.4rem;
-  background: #15c3d6;
+  background: var(--background);
   border: 0;
   border-radius: 2rem;
 
@@ -59,16 +59,16 @@ a.create-orphanage {
 }
 
 a.create-orphanage:hover {
-  background: #17d6eb;
+  background: var(--hover);
 }
 
 .leaflet-popup-content-wrapper {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--background);
   border-radius: 20px;
 }
 
 .leaflet-popup-content {
-  color: #0089a5;
+  color: var(--fontColor);
   margin: 0.8rem 1.2rem;
 
   display: flex;
@@ -79,7 +79,7 @@ a.create-orphanage:hover {
 .leaflet-popup-content a {
   width: 4rem;
   height: 4rem;
-  background: #15c3d6;
+  background: var(--background);
   box-shadow: 17.2828px 27.65px 41.48px rgba(23, 142, 166, 0.16);
   border-radius: 12px;
 
@@ -91,7 +91,7 @@ a.create-orphanage:hover {
 }
 
 .leaflet-popup-content a:hover {
-  background: #17d6eb;
+  background: var(--hover);
 }
 
 .leaflet-popup-tip {

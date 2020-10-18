@@ -11,11 +11,18 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/animations.css">
   <link rel="stylesheet" href="/css/page-landing.css">
+  <link rel="stylesheet" href="/css/dark-theme.css">
+
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div class="switchTheme">
+    <input id="night-mode" class="lamp" type="checkbox" aria-label="night-mode" />
+    <label for="night-mode" class="changeTheme"></label>
+  </div>
+
   <div id="page-landing">
     <div id="container">
       <header>
@@ -39,6 +46,8 @@
       </main>
     </div>
   </div>
+
+  <script src="/scripts/dark-theme.js"></script>
 </body>
 
 </html>

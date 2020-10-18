@@ -22,7 +22,7 @@
 - ✅ "Olhando as oportunidades" 👀
 - ✅ "A escolha da Stack" 📌
 - ✅ "Até dois anos em 2 meses" 🔥
-- ✅ "A milha extra" 🚀
+- 🔄 "A milha extra" 🚀
 
 ---
 
